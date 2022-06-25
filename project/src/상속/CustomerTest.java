@@ -1,29 +1,30 @@
 package 상속;
 
+import java.util.ArrayList;
+
 public class CustomerTest {
 
     public static void main(String[] args) {
+
+        ArrayList<Customer> customers = new ArrayList<>();
+
         Customer customerLee = new Customer(10010, "이초콜릿");
-//        customerLee.setCustomerId(10010);
-//        customerLee.setCustomerName("이초콜릿");
-        customerLee.bonusPoint = 1000;
-        int price = customerLee.calcPrice(1000);
-        System.out.println("할인된 가격은 " + price + "원 입니다.");
-        System.out.println(customerLee.showCustomerInfo());
-
-
+        GoldCustomer customerChoi = new GoldCustomer(1030, "최인국");
         VipCustomer customerKim = new VipCustomer(10020, "김파인애플");
-//        customerKim.setCustomerId(10020);
-//        customerKim.setCustomerName("김파인애플");
-        customerKim.bonusPoint = 1000;
-        int vipPrice = customerKim.calcPrice(1000);
-        System.out.println("할인된 가격은 " + vipPrice + "원 입니다.");
-        System.out.println(customerKim.showCustomerInfo());
 
-        Customer vc = new VipCustomer(12345, "김여사");
-        // 업캐스팅하면 상위 클래스 메서드(+오버라이드한 경우 하위클래스 메서드)만 사용가능
-        System.out.println(vc.calcPrice(1000));
+        customers.add(customerLee);
+        customers.add(customerChoi);
+        customers.add(customerKim);
 
+        for(Customer customer:customers) {
+            System.out.println(customer.showCustomerInfo());
+        }
 
+        int price = 10000;
+
+        for(Customer customer:customers) {
+            System.out.println(customer.getCustomerName() + "님이 " + customer.calcPrice(price) + "원을 지불하셨습니다.");
+            System.out.println(customer.getCustomerName() + "님의 현재 보너스 포인트는 " + customer.bonusPoint + "원 입니다.");
+        }
     }
 }

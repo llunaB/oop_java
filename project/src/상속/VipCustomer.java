@@ -14,7 +14,6 @@ public class VipCustomer extends Customer {
 //        salesRatio = 0.1;
 //    }
 
-
     public VipCustomer(int customerId, String customerName) {
 
         super(customerId, customerName);
@@ -23,7 +22,6 @@ public class VipCustomer extends Customer {
         salesRatio = 0.1;
         System.out.println("VIP Customer 생성자");
 
-
     }
 
     @Override
@@ -31,11 +29,6 @@ public class VipCustomer extends Customer {
         bonusPoint += price * bonusRatio;
         price -= (int)(price * salesRatio);
         return price;
-    }
-
-    @Override
-    public String showCustomerInfo() {
-        return super.showCustomerInfo();
     }
 
     public int getAgentID() {
