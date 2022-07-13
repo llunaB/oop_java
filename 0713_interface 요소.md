@@ -19,8 +19,8 @@
 
 ```java
 default void description() {
-	System.out.println("정수 계산기를 구현합니다.");
-	myMethod();
+        System.out.println("정수 계산기를 구현합니다.");
+        myMethod();
 }
 
 ```
@@ -30,8 +30,8 @@ default void description() {
 ```java
 @Override
 public void description() {
-	System.out.println("CompleteCalc에서 재정의한 default 메서드");
-	//super.description();
+        System.out.println("CompleteCalc에서 재정의한 default 메서드");
+        //super.description();
 }
 
 ```
@@ -40,19 +40,19 @@ public void description() {
 
 
 
-## 정적 메서드(Java 8~)
+## 정적(static) 메서드(Java 8~)
 
 - 인스턴스 생성과 관계없이 인터페이스 타입으로 사용할 수 있는 메서드
 
 ```java
 static int total(int[] arr) {
-	int total = 0;
-		
-	for(int i: arr) {
-		total += i;
-	}
-	mystaticMethod();
-	return total;
+        int total = 0;
+
+        for(int i: arr) {
+          total += i;
+        }
+        mystaticMethod();
+        return total;
 }
 
 ```
@@ -68,11 +68,11 @@ static int total(int[] arr) {
 
 ```java
 private void myMethod() {
-	System.out.println("private method");
+				System.out.println("private method");
 }
 	
 private static void mystaticMethod() {
-	System.out.println("private static method");
+				System.out.println("private static method");
 }
 
 ```
