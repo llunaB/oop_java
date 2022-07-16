@@ -10,6 +10,10 @@ public class CalculatorTest {
         Calc calc = new CompleteCalc();
         System.out.println(calc.add(num1, num2));
         System.out.println(calc.times(num1, num2));
-        //calc.showInfo(); => 불가
+        //calc.showInfo(); => 불가, Calc 인터페이스에 선언된 메서드만 쓸 수 있다.
+
+        CompleteCalc completeCalc = new CompleteCalc();
+        completeCalc.showInfo();
+
     }
 }

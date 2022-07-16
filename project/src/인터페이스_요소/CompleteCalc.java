@@ -19,4 +19,9 @@ public class CompleteCalc extends Calculator {
     public void showInfo() {
         System.out.println("모두 구현하였습니다.");
     }
+
+    @Override
+    public void description() {
+        System.out.println("인터페이스의 defualt method 재정의");
+    }
 }

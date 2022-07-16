@@ -1,7 +1,5 @@
 package 인터페이스_요소;
 
-import 인터페이스.Calc;
-
 // Calculator 는 Calc 를 구현상속
 public abstract class Calculator implements Calc {
 

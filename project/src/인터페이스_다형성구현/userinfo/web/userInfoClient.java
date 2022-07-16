@@ -22,6 +22,8 @@ public class userInfoClient {
 
         UserInfo userInfo = new UserInfo();
         userInfo.setUserId("12345");
+        userInfo.setPassword("@123!");
+        userInfo.setUserName("이순신");
 
         UserInfoDao userInfoDao = null;
 
