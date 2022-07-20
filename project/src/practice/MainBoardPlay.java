@@ -11,7 +11,7 @@ public class MainBoardPlay {
         AdvancedLevel aLevel = new AdvancedLevel();
         player.upgradeLevel(aLevel);
         player.play(2);
-        
+
         // SuperLevel 클래스의 인스턴스 생성
         SuperLevel sLevel = new SuperLevel();
         player.upgradeLevel(sLevel);
