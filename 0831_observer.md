@@ -12,5 +12,5 @@
 
 
 
-![Java-4](0831_옵저버패턴.assets/Java-4.jpg)
+![Java-4](0831_observer.assets/observer.jpg)
 
